@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+}
+
+body, html {
+    /* Make the body expand to the full height of the window */
+    height: 100%;
+}
+
+body {
+    /* Center the dashboard in the window */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    /* background-color: rgb(119, 216, 216); */
+    /* background-image: url(images/finland-6.png); */
+    background-size: cover;
+}
+
+/*************/
+/* Dashboard */
+.dashboard {
+    /* border: 1px solid #000; */
+    max-width: 800px;
+    height: 600px;
+    /* Layout the dashboard grid */
+    display: grid;
+    grid-gap: 15px;
+    grid-template-areas: "t t t t"  /* .title first row*/
+                            "p w w w"  /* .population and .welcome second row */
+                            "d c g n"; /* .gdp, .code, .govt, and .news row 3 */
+    grid-template-rows: 100px 200px 200px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*************/
+/* Button and Input Styling */
+button {
+    padding: 0.5rem;
+    border: 0;
+    background-color: #fff;
+}
+
+input {
+    padding: 0.5rem;
+}
+
+button, input {
+    margin: 0  0 1rem 0;
+}
+
+/*************/
+/* Name Label */
+label {
+    font-size: 0.85rem;
+}
+
+/*************/
+/* Title */
+.title { 
+    grid-area: t; 
+    text-align: center;
+    color: #000;
+}
+
+/*************/
+/* Population Section */
+.population { 
+    grid-area: p; 
+    background-image: url(images/finland-8.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/*************/
+/* Welcome Section */
+.welcome { 
+    grid-area: w; 
+    background-image: url(images/finland-2.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/*************/
+/* GDP Section */
+.gdp { 
+    grid-area: d; 
+    background-image: url(images/finland-3.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/*************/
+/* Calling Code Section */
+.code { 
+    grid-area: c; 
+    background-image: url(images/finland-4.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*************/
+/* Govt Section */
+.govt { 
+    grid-area: g; 
+    background-image: url(images/finland-1.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/*************/
+/* News Section */
+.news { 
+    grid-area: n;
+    background-image: url(images/finland-5.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.news button {
+    margin-top: -10px;
+    padding: .40rem;
+    align-self: flex-end;
+}
+
+/*************/
+/* Grid Cells */
+.grid-cell {
+    background-color: #fff;
+    padding: 1em;
+}
+
+/*************/
+/* Nato Memeber Circle */   
+.nato {
+    position: absolute;
+    padding: 1rem;
+    background-color: gold;
+    color: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 90%;
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    right: -20px;
+    top: -20px;
+    transform: rotate(15deg);
+}
+
+/*********************/
+/* Media Queries */
+/*********************/
+
+/* Tablet screens */
+@media only screen and (max-width: 800px) {
+    body {
+        /* Center the dashboard in the window */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
+        /* background-color: rgb(119, 216, 216); */
+        /* background-image: url(images/finland-6.png); */
+        background-size: cover;
+    }
+    
+    .dashboard {
+        /* border: 1px solid #000; */
+        max-width: 700px;
+        height: 800px;
+        /* Layout the dashboard grid */
+        display: grid;
+        grid-gap: 14px;
+        grid-template-areas: "t t t" /* title welcome first row */
+                             "p p c" /* .population and .code, second row*/
+                             "d d d" /* gdp, third row */
+                             "w g g" /* .welcome and .govt, fourth row */
+                             "n n n"; /* .news, last row */
+        grid-template-rows: 100px 200px 200px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Nato Memeber Circle */
+    .nato {
+        visibility: hidden;
+        position: absolute;
+        padding: 1rem;
+        background-color: gold;
+        color: #000;
+        width: 40px;
+        height: 40px;
+        border-radius: 90%;
+        font-size: 0.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        right: -10px;
+        top: -20px;
+        transform: rotate(15deg);
+    }
+}
+
+/*********************/
+/* Mobile Screens */
+@media only screen and (max-width: 480px) {
+    body {
+        /* Center the dashboard in the window */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
+        /* background-color: rgb(119, 216, 216); */
+        /* background-image: url(images/finland-6.png); */
+        background-size: cover;
+    }
+    
+    .dashboard {
+        /* border: 1px solid #000; */
+        max-width: 400px;
+        /* Layout the dashboard grid */
+        display: grid;
+        grid-gap: 12px;
+        grid-template-areas: "t t" /* title welcome first row */
+                             "p c" /* .population and .code, second row*/
+                             "w g" /* .welcome and .govt, fourth row */
+                             "d d" /* gdp, third row */
+                             "n n"; /* .news, last row */
+        grid-template-rows: 100px 200px 200px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Nato Memeber Circle */
+    .nato {
+        visibility: hidden;
+        position: absolute;
+        padding: 1rem;
+        background-color: gold;
+        color: #000;
+        width: 40px;
+        height: 40px;
+        border-radius: 90%;
+        font-size: 0.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        right: -10px;
+        top: -20px;
+        transform: rotate(15deg);
+    }
+}
