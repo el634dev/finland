@@ -1,3 +1,9 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .dashboard {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
