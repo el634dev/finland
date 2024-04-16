@@ -1,7 +1,22 @@
+* {
+    margin: 0;
+}
+
+body, html {
+    /* Make the body expand to the full height of the window */
+    height: 100%;
+}
+
 body {
+    /* Center the dashboard in the window */
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    /* background-color: rgb(119, 216, 216); */
+    /* background-image: url(images/finland-6.png); */
+    background-size: cover;
 }
 
 .dashboard {
